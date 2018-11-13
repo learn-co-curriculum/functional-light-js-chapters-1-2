@@ -54,7 +54,7 @@ Some other authors and content you should check out:
 - [James Longster](https://github.com/jlongster)
 - [André Staltz](http://staltz.com/)
 - [Functional Programming Jargon](https://github.com/hemanth/functional-programming-jargon#functional-programming-jargon)
-- [Functional Programming Exercises](https://github.com/InceptionCode/Functional-Programming-Exercises)
+- [Functional Programming Exercises](https://github.com/InceptionCode/Functional-Programming-Exercises) _Note: this has some exercises for later chapters of this book!_
 
 ## Chapter 2: The Nature of Functions
 ### Functions vs Procedures
