@@ -36,13 +36,16 @@ Declarative over Imperative
 Explicit over Implicit
 
 ### Resources
-Books
+Books.
 Some FP/JavaScript books that you should definitely read:
+
 • [Professor Frisby’s Mostly Adequate Guide to Functional Programming by Brian Lonsdorf](https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch1.html)
 • [JavaScript Allongé by Reg Braithwaite](https://leanpub.com/javascriptallongesix)
 • [Functional JavaScript by Michael Fogus](http://shop.oreilly.com/product/0636920028857.do)
-Blogs/sites
+
+Blogs/sites.
 Some other authors and content you should check out:
+
 •[Fun Fun Function Videos by Mattias P Johansson](https://www.youtube.com/watch?v=BMUiFMZr7vk)
 • [Awesome FP JS](https://github.com/stoeffel/awesome-fp-js)
 • [Kris Jenkins](http://blog.jenkster.com/2015/12/what-is-functional-programming.html)
@@ -99,7 +102,7 @@ ES6!
   - side effects
   - good example of sneaky side effect:
 
-```
+```js
 function sum(list) {
   var total = 0;
   for (let i = 0; i < list.length; i++) { if (!list[i]) list[i] = 0;
@@ -117,7 +120,7 @@ Functions that return functions, functions that receive other functions.
 - :thumbs up: Closures
   - >Closure is when a function remembers and accesses variables from outside of its own scope, even when that function is executed in a different scope. currying
 
-```
+```js
 function expect(actual) {
   return {
     to_eq: function(expected) {
@@ -145,7 +148,7 @@ expect(sum(1,2)).to_eq(3)
 2 - Definitely agree with the benefits of parameter destructuring, but where do we draw the line?
 This seems fine:
 
-```
+```js
 const MyComponent = ({ currentUser, loading, lesson }) => {
   // render stuff
 }
@@ -153,7 +156,7 @@ const MyComponent = ({ currentUser, loading, lesson }) => {
 
 But what do we think about:
 
-```
+```js
 const MyComponent = ({ currentUser: { learnUsername: username, id, onEnterpriseServer }, loading, lesson: { title, type, remote, unit: { iteration: title }}}) => {
   // render more specific stuff
 }
@@ -161,13 +164,13 @@ const MyComponent = ({ currentUser: { learnUsername: username, id, onEnterpriseS
 
 3 - One place I'm apt to agree with him around avoiding all of the ES6 arrow function syntax differentiations is in this scenario:
 
-```
+```js
 somePromise.then((payload) => processPayload(payload))
 ```
 
 then ... a bug appears ... you want to console log in the callback. A multi-line change is required:
 
-```
+```js
 somePromise.then((payload) => {
   console.log('what is this thing even???', payload)
   return processPayload(payload)
@@ -179,7 +182,7 @@ A silly example but, ya, how do we feel about the tradeoffs of the shorthand syn
 
 4 - Here's an example of some very non-functional, side-effecty code from Ironboard. it's not easy to follow:
 
-```
+```ruby
 class TrackSwitcherInfoBuilder < BaseService
 
   def self.info_hash_for_user(user)
