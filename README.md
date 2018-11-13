@@ -8,6 +8,7 @@ Tenents of "Functional-Light Programming"
 - understanding over terminology and jargon
 - humans over computers
 - apply where useful over prescriptive absolutism
+
 >"I believe that programming is fundamentally about humans, not about code. I believe that code is first and foremost a means of human communication, and only as a side effect (hear my self-referential chuckle) does it instruct the computer."
 
 > "I think that absolutism is bogus"
@@ -15,9 +16,11 @@ Tenents of "Functional-Light Programming"
 ## Chapter 1: Why Functional Programming
 ### Confidence
 "Trust": Trusting code is more than just running the tests. You trust what you understand; you understand what you trust
+
 > I mean that you can verify, by reading and reasoning, not just executing, that you understand what a piece of code will do; you aren’t just relying on what it _should_ do.
 
 ### Communication
+
 > For example, once you learn what map(..) does, you’ll be able to almost instantly spot and understand it when you see it in any program. But every time you see a for loop, you’re going to have to read the whole loop to understand it. The syntax of the for loop may be familiar, but the substance of what it’s doing is not; that has to be read, every time.
 
 :points up: good point!
@@ -51,12 +54,15 @@ Some other authors and content you should check out:
 ## Chapter 2: The Nature of Functions
 ### Functions vs Procedures
 Basic definition of a function:
+
 > "a function is a collection of code that can be executed one or more times."
 
 Procedure:
+
 > A procedure is an arbitrary collection of functionality. It may have inputs, it may not. It may have an output (return value), it may not.
 
 To use a function _as a function_ and not just a procedure
+
 > "But let’s be clear what a function is. It’s not just a collection of statements/operations. Specifically, a function needs one or more inputs (ideally, just one!) and an output.
 
 ![letmebeclear.jpeg](http://www.quickmeme.com/img/27/27da477625e9460e59ec78eecf65f07d4a9a241c226fe3c64df6b62c2e025a4b.jpg)
@@ -90,35 +96,35 @@ ES6!
   - un`return`ed values
   - side effects
   - good example of sneaky side effect:
-  ```
-  function sum(list) {
-    var total = 0;
-    for (let i = 0; i < list.length; i++) { if (!list[i]) list[i] = 0;
-            total = total + list[i];
-        }
-    return total;
-  }
-  var nums = [ 1, 3, 9, 27, , 84 ];
-  sum( nums );  
-  ```
+```
+function sum(list) {
+  var total = 0;
+  for (let i = 0; i < list.length; i++) { if (!list[i]) list[i] = 0;
+          total = total + list[i];
+      }
+  return total;
+}
+var nums = [ 1, 3, 9, 27, , 84 ];
+sum( nums );  
+```
 
 ### Higher Order Functions
 Functions that return functions, functions that receive other functions.
 
 - :thumbs up: Closures
   - >Closure is when a function remembers and accesses variables from outside of its own scope, even when that function is executed in a different scope.
-  ```
-  function expect(actual) {
-    return {
-      to_eq: function(expected) {
-        return actual === expected
-      }
+```
+function expect(actual) {
+  return {
+    to_eq: function(expected) {
+      return actual === expected
     }
   }
+}
 
-  expect(sum(1,2)).to_eq(3)
-  // when `to_eq` is invoked it has the value of expected inside the closure
-  ```
+expect(sum(1,2)).to_eq(3)
+// when `to_eq` is invoked it has the value of expected inside the closure
+```
   - currying
 - :thumbs down: Anonymous Functions
   - he _really_ doesn't like anonymous functions
@@ -134,12 +140,15 @@ Functions that return functions, functions that receive other functions.
 
 2 - Definitely agree with the benefits of parameter destructuring, but where do we draw the line?
 This seems fine:
+
 ```
 const MyComponent = ({ currentUser, loading, lesson }) => {
   // render stuff
 }
 ```
+
 But what do we think about:
+
 ```
 const MyComponent = ({ currentUser: { learnUsername: username, id, onEnterpriseServer }, loading, lesson: { title, type, remote, unit: { iteration: title }}}) => {
   // render more specific stuff
@@ -147,16 +156,20 @@ const MyComponent = ({ currentUser: { learnUsername: username, id, onEnterpriseS
 ```
 
 3 - One place I'm apt to agree with him around avoiding all of the ES6 arrow function syntax differentiations is in this scenario:
+
 ```
 somePromise.then((payload) => processPayload(payload))
 ```
+
 then ... a bug appears ... you want to console log in the callback. A multi-line change is required:
+
 ```
 somePromise.then((payload) => {
   console.log('what is this thing even???', payload)
   return processPayload(payload)
 }
 ```
+
 And then you have to put it back to the way it was when finished.
 A silly example but, ya, how do we feel about the tradeoffs of the shorthand syntax? Has anyone been burned by having anonymous functions show up in stack trace?
 
