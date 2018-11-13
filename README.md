@@ -9,6 +9,7 @@ Tenents of "Functional-Light Programming"
 - humans over computers
 - apply where useful over prescriptive absolutism
 >"I believe that programming is fundamentally about humans, not about code. I believe that code is first and foremost a means of human communication, and only as a side effect (hear my self-referential chuckle) does it instruct the computer."
+
 > "I think that absolutism is bogus"
 
 ## Chapter 1: Why Functional Programming
@@ -18,6 +19,7 @@ Tenents of "Functional-Light Programming"
 
 ### Communication
 > For example, once you learn what map(..) does, you’ll be able to almost instantly spot and understand it when you see it in any program. But every time you see a for loop, you’re going to have to read the whole loop to understand it. The syntax of the for loop may be familiar, but the substance of what it’s doing is not; that has to be read, every time.
+
 :points up: good point!
 
 ### Readability
@@ -57,7 +59,7 @@ Procedure:
 To use a function _as a function_ and not just a procedure
 > "But let’s be clear what a function is. It’s not just a collection of statements/operations. Specifically, a function needs one or more inputs (ideally, just one!) and an output.
 
-![letmebeclear.jpeg](:storage/3e79cd9a-5039-4144-9e96-95b64a3664a1/00313d30.jpeg)
+![letmebeclear.jpeg](http://www.quickmeme.com/img/27/27da477625e9460e59ec78eecf65f07d4a9a241c226fe3c64df6b62c2e025a4b.jpg)
 
 One set of values map to another set of values (like a graph in high school math class)
 
