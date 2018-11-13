@@ -28,9 +28,11 @@ Tenents of "Functional-Light Programming"
 ### Readability
 
 **Imperative:** _How_ something is done. To understand you must step through at a low level.
+
 **Declarative:** Describe _what_ outcome you want at a high level.
 
 Declarative over Imperative
+
 Explicit over Implicit
 
 ### Resources
@@ -96,6 +98,7 @@ ES6!
   - un`return`ed values
   - side effects
   - good example of sneaky side effect:
+
 ```
 function sum(list) {
   var total = 0;
@@ -112,7 +115,8 @@ sum( nums );
 Functions that return functions, functions that receive other functions.
 
 - :thumbs up: Closures
-  - >Closure is when a function remembers and accesses variables from outside of its own scope, even when that function is executed in a different scope.
+  - >Closure is when a function remembers and accesses variables from outside of its own scope, even when that function is executed in a different scope. currying
+
 ```
 function expect(actual) {
   return {
@@ -125,7 +129,7 @@ function expect(actual) {
 expect(sum(1,2)).to_eq(3)
 // when `to_eq` is invoked it has the value of expected inside the closure
 ```
-  - currying
+
 - :thumbs down: Anonymous Functions
   - he _really_ doesn't like anonymous functions
   - "named functions are always more preferable to anonymous functions"
@@ -174,6 +178,7 @@ And then you have to put it back to the way it was when finished.
 A silly example but, ya, how do we feel about the tradeoffs of the shorthand syntax? Has anyone been burned by having anonymous functions show up in stack trace?
 
 4 - Here's an example of some very non-functional, side-effecty code from Ironboard. it's not easy to follow:
+
 ```
 class TrackSwitcherInfoBuilder < BaseService
 
@@ -262,6 +267,7 @@ class TrackSwitcherInfoBuilder < BaseService
   end
 end
 ```
+
 Anyone got other examples/stories of things that could be refactored to use FP principles? Places where using FP ideas made life easier?
 
 5 - This is the first meeting! What do people want to get out of this book?
