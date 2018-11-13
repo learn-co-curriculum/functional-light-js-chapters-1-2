@@ -162,7 +162,7 @@ const MyComponent = ({ currentUser: { learnUsername: username, id, onEnterpriseS
 }
 ```
 
-3 - One place I'm apt to agree with him around avoiding all of the ES6 arrow function syntax differentiations is in this scenario:
+3 - One place I'm likely to agree with him around avoiding all of the ES6 arrow function syntax differentiations is in this scenario:
 
 ```js
 somePromise.then((payload) => processPayload(payload))
