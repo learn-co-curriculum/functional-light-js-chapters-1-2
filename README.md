@@ -39,22 +39,22 @@ Explicit over Implicit
 Books.
 Some FP/JavaScript books that you should definitely read:
 
-• [Professor Frisby’s Mostly Adequate Guide to Functional Programming by Brian Lonsdorf](https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch1.html)
-• [JavaScript Allongé by Reg Braithwaite](https://leanpub.com/javascriptallongesix)
-• [Functional JavaScript by Michael Fogus](http://shop.oreilly.com/product/0636920028857.do)
+- [Professor Frisby’s Mostly Adequate Guide to Functional Programming by Brian Lonsdorf](https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch1.html)
+- [JavaScript Allongé by Reg Braithwaite](https://leanpub.com/javascriptallongesix)
+- [Functional JavaScript by Michael Fogus](http://shop.oreilly.com/product/0636920028857.do)
 
 Blogs/sites.
 Some other authors and content you should check out:
 
-•[Fun Fun Function Videos by Mattias P Johansson](https://www.youtube.com/watch?v=BMUiFMZr7vk)
-• [Awesome FP JS](https://github.com/stoeffel/awesome-fp-js)
-• [Kris Jenkins](http://blog.jenkster.com/2015/12/what-is-functional-programming.html)
-• [Eric Elliott](https://medium.com/@_ericelliott)
-• [James A Forbes](https://james-forbes.com/)
-• [James Longster](https://github.com/jlongster)
-• [André Staltz](http://staltz.com/)
-• [Functional Programming Jargon](https://github.com/hemanth/functional-programming-jargon#functional-programming-jargon)
-• [Functional Programming Exercises](https://github.com/InceptionCode/Functional-Programming-Exercises)
+- [Fun Fun Function Videos by Mattias P Johansson](https://www.youtube.com/watch?v=BMUiFMZr7vk)
+- [Awesome FP JS](https://github.com/stoeffel/awesome-fp-js)
+- [Kris Jenkins](http://blog.jenkster.com/2015/12/what-is-functional-programming.html)
+- [Eric Elliott](https://medium.com/@_ericelliott)
+- [James A Forbes](https://james-forbes.com/)
+- [James Longster](https://github.com/jlongster)
+- [André Staltz](http://staltz.com/)
+- [Functional Programming Jargon](https://github.com/hemanth/functional-programming-jargon#functional-programming-jargon)
+- [Functional Programming Exercises](https://github.com/InceptionCode/Functional-Programming-Exercises)
 
 ## Chapter 2: The Nature of Functions
 ### Functions vs Procedures
